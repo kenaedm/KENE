@@ -2348,7 +2348,7 @@ end
 if text:match("^تحديث$") and tonumber(msg.sender_user_id_) == tonumber(sudo_add) then
 send(msg.chat_id_, msg.id_, 1, '☑┊تم التحديث', 1, 'md')
 os.execute('rm -rf ./libs/utils.lua')
-os.execute('cd libs && wget https://raw.githubusercontent.com/kenaedm/KENE/master/libs/utils.lua')
+os.execute('cd libs && wget https://raw.githubusercontent.com/KENE/KENE/master/libs/utils.lua')
 os.execute('rm -rf KENE.lua')
 os.execute('wget https://raw.githubusercontent.com/kenaedm/KENE.lua')
 os.exit()
