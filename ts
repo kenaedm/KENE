@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-cd KENE
+cd kenaedm
 screen -S KENE -X kill
-screen -S KENE ./kenaedm
+screen -S KENE ./KENE
