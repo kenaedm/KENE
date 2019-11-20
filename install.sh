@@ -219,5 +219,5 @@ echo -e "\e[38;5;77m       »»     Install KENA [100%]     ««\e[0m"
 echo -e "\27[34m     »»     KENA Channel ; @KENATEAM      ««\e[0m"
 chmod +x tg
 chmod +x ts
-chmod +x KENA
+chmod +x kenaedm
 ./ts
