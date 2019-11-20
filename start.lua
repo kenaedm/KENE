@@ -10,7 +10,7 @@ KENA_file:close()
 https.request("https://api.telegram.org/bot"..KENA_on[1].."/sendMessage?chat_id="..KENA_on[2].."&text=Bot_KENA_is_start_new")
 os.execute('cd .. && rm -rf .telegram-cli')
 os.execute('rm -rf KENA_online.lua')  
-os.execute('./tg -s ./KENA.lua $@ --bot='..KENA_on[1])
+os.execute('./tg -s ./kenaedm.lua $@ --bot='..KENA_on[1])
 end
 function chack(tokenCk)
 local getme = "https://api.telegram.org/bot" ..tokenCk.. '/getme'
@@ -25,7 +25,7 @@ KENA_file:write("token = '" ..tokenCk.."'\n\nsudo_add = "..sudo_send.."" )
 KENA_file:close()
 os.execute('cd .. && rm -fr .telegram-cli')
 os.execute('cd && rm -fr .telegram-cli')
-os.execute('./tg -s ./KENA.lua $@ --bot='..tokenCk)
+os.execute('./tg -s ./kenaedm.lua $@ --bot='..tokenCk)
 else
 print("\27[31m»»التوكن غير صحيح , اعد ارسال التوكن««\27[m")
 local token_send = io.read()
@@ -45,7 +45,7 @@ local getme = "https://api.telegram.org/bot" ..token.. '/getme'
 local req = https.request(getme)
 local data = JSON:decode(req)
 if data.ok == true then
-os.execute('./tg -s ./KENA.lua $@ --bot='..token)
+os.execute('./tg -s ./kenaedm.lua $@ --bot='..token)
 else
 print("\27[31mالتوكن غير صيح , اعد ارسال التوكن««\27[m")
 local token_send = io.read()
